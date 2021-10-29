@@ -7,26 +7,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-repeat: no-repeat;
   background-size: cover;
-  background: linear-gradient(90deg,rgba(172,173,173,1) 0%, rgba(47,47,47,1));
+  background-color: rgb(120, 34, 201);
 
 }
 .container {
   
-
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
  
 }
 .header {
   color: red;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  width: fit-content;
+  margin-bottom: 30px;
+  
 }
 .wrapper{
-  /* width: 90%; */
+
   text-align: center;
-  width: 340px;
+  width: 480px;
   border-radius: 10px;
   border-color: antiquewhite;
   border-width:thin;
   border-style: solid;
+  
+}
+
+.screen{
+
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 0 10px;
+  background-color:rgb(137, 212, 218);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+ 
   
 }

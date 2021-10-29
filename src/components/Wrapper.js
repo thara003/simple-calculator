@@ -1,10 +1,10 @@
-import React from 'react'
+// import React from 'react'
 
-const Wrapper = () => {
+
+const Wrapper = ({ children }) => {
     return (
         <div className = 'wrapper'>
-            calculator frame goes here!
-            
+           { children }
         </div>
     )
 }
