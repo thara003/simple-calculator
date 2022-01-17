@@ -1,11 +1,15 @@
 // import React from 'react'
 
-const Screen = () => {
+const Screen = (props) => {
     return (
         <div className = 'screen'>
-            <h3>Type Something!!</h3>
+            <h3>{props.screen}</h3>
         </div>
     )
+}
+
+Screen.defaultProps = {
+    screen: "Type something!!"
 }
 
 export default Screen

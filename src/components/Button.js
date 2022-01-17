@@ -1,10 +1,9 @@
 import React from 'react'
 // impor
 
-function Button() {
+function Button({color,value}) {
     return (
-        <button className='button'>1</button>
-        // <button className='button1'>1</button>
+        <button style={{backgroundColor: color}} className='button'>{value}</button>
     )
 }
 

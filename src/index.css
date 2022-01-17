@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   background-color: rgb(120, 34, 201);
 
 }
@@ -15,25 +14,21 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
  
 }
 .header {
-  color: red;
+  color: whitesmoke;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   width: fit-content;
-  margin-bottom: 30px;
   
 }
 .wrapper{
 
   text-align: center;
-  width: 480px;
   border-radius: 10px;
   border-color: antiquewhite;
-  border-width:thin;
   border-style: solid;
   
 }
@@ -41,10 +36,9 @@ body {
 .screen{
 
   height: 100px;
-  width: 100%;
-  margin-bottom: 10px;
-  margin-top: 0px;
-  padding: 0 10px;
+  width: 95%;
+  margin: 10px;
+  padding: 10px 10px;
   background-color:rgb(137, 212, 218);
   border-radius: 10px;
   display: flex;
@@ -54,13 +48,15 @@ body {
   box-sizing: border-box;
  
 }
+.keypad{
+  margin-bottom: 10px;;
+}
 .button{
   display: inline-block;
-  background: rgb(95, 255, 47);
-  color: #fff;
+  width: 23%;
+  height: 50px;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
+  margin: 2px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
