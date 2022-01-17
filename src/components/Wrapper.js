@@ -1,10 +1,12 @@
-// import React from 'react'
+import React from 'react'
+import Button from './Button'
+import Screen from './Screen'
 
-
-const Wrapper = ({ children }) => {
+const Wrapper = () => {
     return (
         <div className = 'wrapper'>
-           { children }
+           <Screen />
+           <Button />
         </div>
     )
 }

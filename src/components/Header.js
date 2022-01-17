@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <header>
+        <header className='header'>
             <h1>Simple Calculator</h1>
         </header>
     )

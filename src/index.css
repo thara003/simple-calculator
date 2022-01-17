@@ -53,5 +53,17 @@ body {
   font-weight: bold;
   box-sizing: border-box;
  
-  
+}
+.button{
+  display: inline-block;
+  background: rgb(95, 255, 47);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
 }
