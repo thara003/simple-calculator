@@ -1,11 +1,15 @@
+import { useState } from "react";
 import React from "react";
-
+import Screen from "./Screen";
 
 function Button({ color, label }) {
+  const [screen, setScreen] = useState(Screen.screen);
+  
   const onclick = (e) => {
+    setScreen('hai');
     console.log(e.target.value);
   };
-
+console.log(screen);
   return (
 
     <input

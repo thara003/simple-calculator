@@ -3,8 +3,8 @@ import Button from "./Button";
 import Screen from "./Screen";
 
 const Wrapper = () => {
-  const Calculator = () => {
-    console.log("evaluate");
+  const Evaluate = () => {
+    console.log(Screen.defaultProps.screen);
   };
 
   return (
@@ -35,7 +35,7 @@ const Wrapper = () => {
           value={"="}
           style={{ backgroundColor: "rgb(47, 255, 255)" }}
           className="button"
-          onClick={Calculator}
+          onClick={Evaluate}
         />
       </div>
     </div>
