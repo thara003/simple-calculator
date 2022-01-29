@@ -3,13 +3,15 @@ import Button from "./Button";
 import Screen from "./Screen";
 
 const Wrapper = () => {
+  const screen = "Type Something!!";
+
   const Evaluate = () => {
-    console.log(Screen.defaultProps.screen);
+    console.log(screen);
   };
 
   return (
     <div className="wrapper">
-      <Screen />
+      <Screen screen={screen}></Screen>
       <div className="keypad">
         <Button color="red" label={"AC"}></Button>
         <Button color="yellow" label={"C"}></Button>

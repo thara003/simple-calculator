@@ -6,10 +6,11 @@ function Button({ color, label }) {
   const [screen, setScreen] = useState(Screen.screen);
   
   const onclick = (e) => {
-    setScreen('hai');
-    console.log(e.target.value);
+    setScreen(e.target.value);
+    console.log(screen);
+   
   };
-console.log(screen);
+
   return (
 
     <input

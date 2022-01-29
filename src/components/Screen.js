@@ -1,10 +1,10 @@
 // import React from 'react'
-import Button from "./Button";
-const Screen = () => {
-    const screen = "Type Something!!";
+// import Button from "./Button";
+const Screen = (props) => {
+   
     return (
         <div className = 'screen'>
-            <h3>{screen}</h3>
+            <h3>{props.screen}</h3>
         </div>
     )
 }
