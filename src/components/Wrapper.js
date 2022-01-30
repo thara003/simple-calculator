@@ -2,11 +2,14 @@ import React from "react";
 import { useState } from "react";
 import Screen from "./Screen";
 
-const Wrapper = () => {
+const Wrapper = (props) => {
   const [screen, setScreen] = useState({ display: "" });
+  // let expression = [];
 
   const displayChange = (e) => {
-    setScreen({ display: e.target.value });
+    props.expression.push(e.target.value);
+    setScreen({ display: props.expression});
+    console.log(props.expression);
     
   };
 
