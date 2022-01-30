@@ -1,44 +1,157 @@
 import React from "react";
-import Button from "./Button";
+import { useState } from "react";
 import Screen from "./Screen";
 
 const Wrapper = () => {
-  const screen = "Type Something!!";
+  const [screen, setScreen] = useState({ display: "" });
 
-  const Evaluate = () => {
-    console.log(screen);
+  const displayChange = (e) => {
+    setScreen({ display: e.target.value });
+    
   };
 
   return (
     <div className="wrapper">
-      <Screen screen={screen}></Screen>
+      <Screen display={screen.display}></Screen>
       <div className="keypad">
-        <Button color="red" label={"AC"}></Button>
-        <Button color="yellow" label={"C"}></Button>
-        <Button color="rgb(47, 255, 99)" label={"%"}></Button>
-        <Button color="rgb(47, 255, 99)" label={"/"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"7"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"8"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"9"}></Button>
-        <Button color="rgb(47, 255, 99)" label={"x"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"4"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"5"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"6"}></Button>
-        <Button color="rgb(47, 255, 99)" label={"+"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"1"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"2"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"3"}></Button>
-        <Button color="rgb(47, 255, 99)" label={"-"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"00"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"0"}></Button>
-        <Button color="rgb(158, 255, 47)" label={"."}></Button>
+        <input
+          type="button"
+          value={"AC"}
+          style={{ backgroundColor: "rgb(255, 00, 00)" }}
+          className="button"
+        />
+        <input
+          type="button"
+          value={"C"}
+          style={{ backgroundColor: "rgb(255, 250, 00)" }}
+          className="button"
+        />
+        <input
+          type="button"
+          value={"%"}
+          style={{ backgroundColor: "rgb(47, 255, 99)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"/"}
+          style={{ backgroundColor: "rgb(47, 255, 99)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"7"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"8"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"9"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"x"}
+          style={{ backgroundColor: "rgb(47, 255, 99)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"4"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"5"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"6"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"+"}
+          style={{ backgroundColor: "rgb(47, 255, 99)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"1"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"2"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"3"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"-"}
+          style={{ backgroundColor: "rgb(47, 255, 99)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"00"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"0"}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
+        <input
+          type="button"
+          value={"."}
+          style={{ backgroundColor: "rgb(158, 255, 47)" }}
+          className="button"
+          onClick={displayChange}
+        />
         <input
           type="button"
           value={"="}
-          style={{ backgroundColor: "rgb(47, 255, 255)" }}
+          style={{ backgroundColor: "rgb(47, 255, 99)" }}
           className="button"
-          onClick={Evaluate}
         />
+        
       </div>
     </div>
   );
