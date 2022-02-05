@@ -13,6 +13,13 @@ const Wrapper = (props) => {
     
   };
 
+  const eraseDisplay = (e) => {
+    e.preventDefault();
+    props.expression.pop();
+    setScreen({ display: props.expression });
+    console.log(props.expression);
+  };
+
   return (
     <div className="wrapper">
       <Screen display={screen.display}></Screen>
@@ -28,6 +35,7 @@ const Wrapper = (props) => {
           value={"C"}
           style={{ backgroundColor: "rgb(255, 250, 00)" }}
           className="button"
+          onClick={eraseDisplay}
         />
         <input
           type="button"
