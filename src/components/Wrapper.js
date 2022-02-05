@@ -20,6 +20,16 @@ const Wrapper = (props) => {
     console.log(props.expression);
   };
 
+  const clearDisplay = (e) => {
+    e.preventDefault();
+    if (props.expression.length > 0) {
+      props.expression.length = 0;
+      setScreen({ display: props.expression });
+      console.log("cleared");
+    }
+    
+  }
+
   return (
     <div className="wrapper">
       <Screen display={screen.display}></Screen>
@@ -29,6 +39,7 @@ const Wrapper = (props) => {
           value={"AC"}
           style={{ backgroundColor: "rgb(255, 00, 00)" }}
           className="button"
+          onClick ={clearDisplay}
         />
         <input
           type="button"
