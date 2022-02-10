@@ -67,6 +67,34 @@ const Wrapper = (props) => {
         props.evalexp.length = 0;
         
       }
+      if (props.evalexp[index] === "-") {
+        result =  parseFloat(props.evalexp[index-1]) - parseFloat(props.evalexp[index+1]);
+        setScreen({ display: result });
+        props.expression.length = 0;
+        props.evalexp.length = 0;
+      
+    }
+    if (props.evalexp[index] === "*") {
+      result =  parseFloat(props.evalexp[index-1]) * parseFloat(props.evalexp[index+1]);
+      setScreen({ display: result });
+      props.expression.length = 0;
+      props.evalexp.length = 0;
+    
+  }
+  if (props.evalexp[index] === "/") {
+    result =  parseFloat(props.evalexp[index-1]) / parseFloat(props.evalexp[index+1]);
+    setScreen({ display: result });
+    props.expression.length = 0;
+    props.evalexp.length = 0;
+  
+}
+if (props.evalexp[index] === "%") {
+  result =  parseFloat(props.evalexp[index-1]) % parseFloat(props.evalexp[index+1]);
+  setScreen({ display: result });
+  props.expression.length = 0;
+  props.evalexp.length = 0;
+
+}
       
     }
     
