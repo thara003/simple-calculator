@@ -4,13 +4,12 @@ import Screen from "./Screen";
 
 const Wrapper = (props) => {
   const [screen, setScreen] = useState({ display: "" });
-  // let expression = [];
+  
 
   const displayChange = (e) => {
     props.expression.push(e.target.value);
-    setScreen({ display: props.expression});
+    setScreen({ display: props.expression });
     console.log(props.expression);
-    
   };
 
   const eraseDisplay = (e) => {
@@ -22,13 +21,56 @@ const Wrapper = (props) => {
 
   const clearDisplay = (e) => {
     e.preventDefault();
-    if (props.expression.length > 0) {
       props.expression.length = 0;
       setScreen({ display: props.expression });
       console.log("cleared");
+    
+  };
+
+  const evaluateExpression = () => {
+    let result = 0;
+    console.log("evaluated");
+    for (let index = 0; index < props.expression.length; index++) {
+      if (
+        props.expression[index] === "+" ||
+        props.expression[index] === "-" ||
+        props.expression[index] === "/" ||
+        props.expression[index] === "*" ||
+        props.expression[index] === "%"
+      ) {
+        props.evalexp.push(props.expression[index]);
+      } else {
+        if (
+          props.expression[index - 1] === "+" ||
+          props.expression[index - 1] === "-" ||
+          props.expression[index - 1] === "/" ||
+          props.expression[index - 1] === "*" ||
+          props.expression[index - 1] === "%"
+        ) {
+          props.evalexp.push(props.expression[index]);
+        } else {
+          props.expression[index - 1] = props.expression[index - 1] + props.expression[index];
+          props.evalexp.pop();
+          props.evalexp.push(props.expression[index - 1]);
+        }
+      }
+      
+
+  
+    }
+    console.log(props.evalexp);
+    for (let index = 0; index < props.evalexp.length; index++) {
+      if (props.evalexp[index] === "+") {
+        result =  parseFloat(props.evalexp[index-1]) + parseFloat(props.evalexp[index+1]);
+        setScreen({ display: result });
+        props.expression.length = 0;
+        props.evalexp.length = 0;
+        
+      }
+      
     }
     
-  }
+  };
 
   return (
     <div className="wrapper">
@@ -39,7 +81,7 @@ const Wrapper = (props) => {
           value={"AC"}
           style={{ backgroundColor: "rgb(255, 00, 00)" }}
           className="button"
-          onClick ={clearDisplay}
+          onClick={clearDisplay}
         />
         <input
           type="button"
@@ -172,8 +214,8 @@ const Wrapper = (props) => {
           value={"="}
           style={{ backgroundColor: "rgb(47, 255, 99)" }}
           className="button"
+          onClick={evaluateExpression}
         />
-        
       </div>
     </div>
   );

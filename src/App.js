@@ -4,11 +4,12 @@ import Wrapper from './components/Wrapper'
 
 const App = () => {
   let expression = [];
-  
+  let evalexp = [];
+  // let number = "";
   return (
     <div className = 'container'>
       <Header></Header>
-        <Wrapper expression={expression}></Wrapper>
+        <Wrapper expression={expression} evalexp = {evalexp}></Wrapper>
 
      
     </div>
