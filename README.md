@@ -1,6 +1,10 @@
 # Simple - Calculator
 
-Visit [https://thara003.github.io/simple-calculator/](https://thara003.github.io/simple-calculator/) to view the magic ✨
+![](https://img.shields.io/badge/Reactjs-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![](https://img.shields.io/badge/NPM-important?style=for-the-badge&logo=npm&logoColor=white)
+![](https://img.shields.io/badge/CSS-563D7C?style=for-the-badge&logo=css3&logoColor=white)
+
+This project is implemented using ReactJS.
 
 ## Getting Started 💫
 
