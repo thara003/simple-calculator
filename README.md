@@ -21,11 +21,11 @@ $ npm start
 
 ## Access the application 😎
 
-To access the application open [http://localhost:3000/](http://localhost:3000/)
+To access the application open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
 ## Bugs found 😪
 
-There are some imperfections in the code , which will improved in the course of time⏳.
+There are some imperfections in the code , which will be improved in the course of time⏳.
 
 ## Contributions
 
