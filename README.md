@@ -27,7 +27,7 @@ To access the application open [http://localhost:3000/](http://localhost:3000/) 
 
 There are some imperfections in the code , which will be improved in the course of time⏳.
 
-## Contributions
+## Contributions 🤝
 
 Your contributions are always welcomed whole hartedly ❤.
 
