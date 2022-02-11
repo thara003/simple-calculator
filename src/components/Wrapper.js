@@ -35,7 +35,7 @@ const Wrapper = (props) => {
         props.expression[index] === "+" ||
         props.expression[index] === "-" ||
         props.expression[index] === "/" ||
-        props.expression[index] === "*" ||
+        props.expression[index] === "x" ||
         props.expression[index] === "%"
       ) {
         props.evalexp.push(props.expression[index]);
@@ -44,7 +44,7 @@ const Wrapper = (props) => {
           props.expression[index - 1] === "+" ||
           props.expression[index - 1] === "-" ||
           props.expression[index - 1] === "/" ||
-          props.expression[index - 1] === "*" ||
+          props.expression[index - 1] === "x" ||
           props.expression[index - 1] === "%"
         ) {
           props.evalexp.push(props.expression[index]);
@@ -74,7 +74,7 @@ const Wrapper = (props) => {
         props.evalexp.length = 0;
       
     }
-    if (props.evalexp[index] === "*") {
+    if (props.evalexp[index] === "x") {
       result =  parseFloat(props.evalexp[index-1]) * parseFloat(props.evalexp[index+1]);
       setScreen({ display: result });
       props.expression.length = 0;

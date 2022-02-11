@@ -3,8 +3,8 @@ import Header from './components/Header'
 import Wrapper from './components/Wrapper'
 
 const App = () => {
-  let expression = [];
-  let evalexp = [];
+  let expression = [""];
+  let evalexp = [""];
   // let number = "";
   return (
     <div className = 'container'>
